@@ -1,0 +1,19 @@
+package com.abhisekh.UI.DAO;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.abhisekh.UI.Model.User;
+
+@Repository
+public class UserDAO {
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+	
+	public int insertUsersToUserTable(User user) {
+		String sql="insert into user (UserName, Password) values(?,?)";
+		return jdbcTemplate.update(sql, user.getUsername(),user.getPassword());		
+	}
+	
+}

@@ -1,0 +1,19 @@
+package com.abhisekh.UI.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.abhisekh.UI.DAO.UserDAO;
+import com.abhisekh.UI.Model.User;
+
+@Service
+public class UserService {	
+	@Autowired
+	private UserDAO userDAO;
+	
+	
+	public int registerUsers(User user) {
+		return userDAO.insertUsersToUserTable(user);		
+	}
+	
+}

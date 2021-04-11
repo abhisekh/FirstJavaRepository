@@ -1,0 +1,45 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Select Preferences</title>
+</head>
+<body bgcolor="lavender">
+	<h1 id="welcome">
+	<center>Welcome ${username }</center>
+	</h1>
+	
+	<div align="center" id="profileDetails">
+		<form:form action="process" method="post" modelAttribute="profile">
+			<table>
+			<tr>
+				<td><form:label path="firstName">First Name: </form:label></td>
+				<td><form:input path="firstName"/></td>
+			</tr>
+			
+			<tr>
+				<td><form:label path="lastName">Last Name: </form:label></td>
+				<td><form:input path="lastName"/></td>
+			</tr>
+			
+			
+			<tr>
+				<td><form:label path="userName">User Name: </form:label></td>
+				<td><form:input path="userName"/></td>
+			</tr>
+			
+			
+			
+			
+			</table>
+		</form:form>
+		
+			
+	
+	</div>
+</body>
+</html>

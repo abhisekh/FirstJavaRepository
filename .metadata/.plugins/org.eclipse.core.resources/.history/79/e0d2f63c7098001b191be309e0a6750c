@@ -1,0 +1,5 @@
+package com.abhisekh.UI.Model;
+
+public class User {
+
+}

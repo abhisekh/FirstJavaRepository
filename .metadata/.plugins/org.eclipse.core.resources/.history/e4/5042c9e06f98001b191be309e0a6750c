@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>    
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %> 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Travel App</title>
+</head>
+<body bgcolor="lavender">
+		<h1 id="header">
+		<center>
+		Welcome to Evolution's Travel Booking Application
+		</center>
+		</h1>
+		
+		<div id=form align="center">
+			<table>
+				<tr>
+				<td>User Name:</td>
+				
+				</tr>
+			</table>
+		</div>
+		
+</body>
+</html>

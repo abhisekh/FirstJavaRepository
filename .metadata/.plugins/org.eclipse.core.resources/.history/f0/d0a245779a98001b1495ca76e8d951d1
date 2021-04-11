@@ -1,0 +1,14 @@
+package com.abhisekh.UI.Model;
+
+public class User {
+	
+	private String username;
+	private String password;
+	private String confirmPassword;
+	
+	
+	public User() {}
+
+	
+
+}

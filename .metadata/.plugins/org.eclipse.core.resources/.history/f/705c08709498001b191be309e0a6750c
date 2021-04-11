@@ -1,0 +1,5 @@
+package com.abhisekh.UI.DAO;
+
+public class UserDAO {
+
+}

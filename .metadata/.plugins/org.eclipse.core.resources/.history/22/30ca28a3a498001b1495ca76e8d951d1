@@ -1,0 +1,44 @@
+package com.abhisekh.UI.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.abhisekh.UI.Model.User;
+import com.abhisekh.UI.Service.UserService;
+
+@Controller
+public class WebController {
+	
+	@Autowired
+	private UserService userService;
+	
+	@RequestMapping(value = "/show", method = RequestMethod.GET)
+	public String showLoginPage(@ModelAttribute User user) {		
+		return "login";
+	}
+	
+	@RequestMapping(value = "/register", method = RequestMethod.GET)
+	public String showRegisterPage(@ModelAttribute User user) {		
+		return "register";
+		
+	}
+	
+	
+	@RequestMapping(value = "/handleRegistration", method = RequestMethod.POST)
+	public String processRegistration(@ModelAttribute User user) {
+		userService.registerUsers(user);
+		return "redirect:/show";
+	}
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public String handleLogin(@ModelAttribute User user) {
+		
+		return "userPreference";
+	}
+	
+	
+	
+	
+}

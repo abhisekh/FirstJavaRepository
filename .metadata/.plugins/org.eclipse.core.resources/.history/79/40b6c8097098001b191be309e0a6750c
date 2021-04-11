@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Travel App</title>
+</head>
+<body bgcolor="lavender">
+	<h1 id="header">
+		<center>Welcome to Evolution's Travel Booking Application</center>
+	</h1>
+
+	<div id=form align="center">
+		<form:form action="login" method="post" modelAttribute="user">
+			<table>
+				<tr>
+					<td><form:label path="username" id="username" name="username">User Name:</form:label></td>
+					<td><form:input path="username" id="username" name="username" /></td>
+				</tr>
+			</table>
+			<tr>
+				<td><form:label path="password" id="password" name="password">Password:</form:label></td>
+				<td><form:input path="password" id="password" name="password" /></td>
+			</tr>
+		</form:form>
+	</div>
+
+</body>
+</html>

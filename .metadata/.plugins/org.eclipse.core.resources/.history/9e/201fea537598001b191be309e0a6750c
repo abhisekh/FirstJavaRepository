@@ -1,0 +1,11 @@
+server.port=8082
+spring.mvc.view.prefix=/WEB-INF/views/
+spring.mvc.view.suffix=.jsp
+
+#####MYSQL##############
+
+
+
+
+
+logging.level.org.springframework.boot.web=debug

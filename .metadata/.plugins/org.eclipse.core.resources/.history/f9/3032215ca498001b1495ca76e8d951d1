@@ -1,0 +1,28 @@
+package com.abhisekh.UI.DAO;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.abhisekh.UI.Model.User;
+import com.abhisekh.UI.RowMappers.UserRowMapper;
+
+@Repository
+public class UserDAO {
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+	
+	public int insertUsersToUserTable(User user) {
+		String sql="insert into user (UserName, Password) values(?,?)";
+		return jdbcTemplate.update(sql, user.getUsername(),user.getPassword());		
+	}
+	
+	
+	public int authenticateUser(User user) {
+		String sql="select * from user where UserName=? and Password=?";
+		List<User> userDetails = jdbcTemplate.query(sql, new UserRowMapper(), user.getUsername(),user.getPassword());
+		return user;
+	}
+}

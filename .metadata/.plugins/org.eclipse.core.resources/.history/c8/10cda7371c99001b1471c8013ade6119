@@ -1,0 +1,5 @@
+package com.abhisekh.UI.Validators;
+
+public class UserValidator {
+
+}

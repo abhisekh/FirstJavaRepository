@@ -1,0 +1,7 @@
+package com.abhisekh.UI.RowMappers;
+
+import org.springframework.jdbc.core.RowMapper;
+
+public class UserRowMapper implements RowMapper<T> {
+
+}
